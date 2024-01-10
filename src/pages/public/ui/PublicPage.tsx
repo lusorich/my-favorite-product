@@ -1,7 +1,10 @@
+import { Header } from "shared/ui/Header/Header";
+import s from "./PublicPage.module.scss";
+
 export const PublicPage = () => {
   return (
-    <div>
-      <div>Hello</div>Public Page
-    </div>
+    <section class={s.content}>
+      <Header />
+    </section>
   );
 };
