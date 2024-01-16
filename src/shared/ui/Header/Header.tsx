@@ -7,7 +7,16 @@ export const Header = () => {
       <div>
         <Icon name={ICON_NAME.ROBOT} />
       </div>
-      <div>signin</div>
+      <div>
+        <button>Войти</button>
+
+        <Icon
+          name={ICON_NAME.SIGNIN}
+          width="4rem"
+          height="3.2rem"
+          viewBox="0 0 50 44"
+        />
+      </div>
     </header>
   );
 };

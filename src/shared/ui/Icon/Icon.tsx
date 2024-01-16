@@ -21,6 +21,7 @@ interface IconProps {
   width?: string;
   height?: string;
   fill?: string;
+  viewBox?: string;
 }
 
 export const Icon = ({
@@ -28,11 +29,12 @@ export const Icon = ({
   width = "12rem",
   height = "12rem",
   fill = "black",
+  viewBox = "0 0 127 110",
 }: IconProps) => (
   <svg
     width={width}
     height={height}
-    viewBox="0 0 127 110"
+    viewBox={viewBox}
     fill={fill}
     xmlns="http://www.w3.org/2000/svg"
   >
