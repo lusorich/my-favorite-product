@@ -6,7 +6,7 @@ export const Signin = () => {
   return (
     <div class={s.signin}>
       <button class={s.btn}>
-        <span>Войти</span>
+        <span class={s.text}>Войти</span>
         <Icon
           name={ICON_NAME.SIGNIN}
           width="4rem"
