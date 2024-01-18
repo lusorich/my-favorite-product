@@ -49,18 +49,24 @@ const data = [
   },
 ];
 
-export const PublicPage = () => {
+const getTabsApi = (initialValue, onValueChange) => {
   const [state, send] = useMachine(
     tabs.machine({
       id: createUniqueId(),
-      value: "1",
+      value: initialValue,
       onValueChange(details) {
-        console.log("details", details);
+        onValueChange(details);
       },
     })
   );
 
   const api = createMemo(() => tabs.connect(state, send, normalizeProps));
+
+  return api;
+};
+
+export const PublicPage = () => {
+  const api = getTabsApi("1", (details) => console.log(details));
 
   return (
     <section class={s.content}>
