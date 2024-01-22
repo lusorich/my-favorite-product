@@ -1,0 +1,19 @@
+@import "assets/styles/constants";
+
+.btn {
+  background: unset;
+  border: unset;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.line {
+  width: 10rem;
+  height: 1rem;
+
+  background-color: $whispering-white;
+  border-radius: 1.2rem;
+}

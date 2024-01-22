@@ -9,6 +9,8 @@ export default defineConfig({
       pages: path.resolve(__dirname, "./src/pages"),
       shared: path.resolve(__dirname, "./src/shared"),
       assets: path.resolve(__dirname, "./src/shared/assets"),
+      layouts: path.resolve(__dirname, "./src/layouts"),
+      features: path.resolve(__dirname, "./src/features"),
     },
   },
   plugins: [solid()],
