@@ -1,6 +1,6 @@
-import { Icon } from "shared/ui/Icon/Icon";
-import { ICON_NAME } from "shared/utils/constants";
-import s from "./Signin.module.scss";
+import { Icon } from 'shared/ui/Icon/Icon';
+import { ICON_NAME } from 'shared/utils/constants';
+import s from './Signin.module.scss';
 
 export const Signin = () => {
   return (

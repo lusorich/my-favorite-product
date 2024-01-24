@@ -27,9 +27,9 @@
       "shared/*": ["src/shared/*"],
       "app/*": ["src/app/*"],
       "layouts/*": ["src/layouts/*"],
-      "features/*": ["src/features/*"]
-    }
+      "features/*": ["src/features/*"],
+    },
   },
   "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node.json" }],
 }

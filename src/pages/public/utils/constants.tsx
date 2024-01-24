@@ -1,10 +1,10 @@
-import { Icon } from "shared/ui/Icon/Icon";
-import { ICON_NAME } from "shared/utils/constants";
-import { MarketingTextBlock } from "../ui/MarketingTextBLock/MarketingTextBlock";
+import { Icon } from 'shared/ui/Icon/Icon';
+import { ICON_NAME } from 'shared/utils/constants';
+import { MarketingTextBlock } from '../ui/MarketingTextBLock/MarketingTextBlock';
 
 export const TABS_CONTENT = [
   {
-    value: "1",
+    value: '1',
     icon: (
       <Icon
         name={ICON_NAME.EMOJIES}
@@ -21,7 +21,7 @@ export const TABS_CONTENT = [
     ),
   },
   {
-    value: "2",
+    value: '2',
     content: (
       <MarketingTextBlock
         title="Выбирай!"
@@ -38,7 +38,7 @@ export const TABS_CONTENT = [
     ),
   },
   {
-    value: "3",
+    value: '3',
     content: (
       <MarketingTextBlock
         title="Ставь лайк!"
@@ -55,7 +55,7 @@ export const TABS_CONTENT = [
     ),
   },
   {
-    value: "4",
+    value: '4',
     content: (
       <MarketingTextBlock
         title="Делись мнением!"
