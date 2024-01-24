@@ -1,4 +1,4 @@
-import s from "./MarketingTextBlock.module.scss";
+import s from './MarketingTextBlock.module.scss';
 
 interface MarketingTextBlockProps {
   title: string;

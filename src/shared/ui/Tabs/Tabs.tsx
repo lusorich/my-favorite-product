@@ -1,19 +1,19 @@
-import { getTabsApi } from "shared/utils/utils";
-import { For, JSX } from "solid-js";
-import s from "./Tabs.module.scss";
+import { getTabsApi } from 'shared/utils/utils';
+import { For, JSX } from 'solid-js';
+import s from './Tabs.module.scss';
 
 interface TabsProps {
   data: { value: string; content: string | JSX.Element; icon: JSX.Element }[];
   defaultTab: string;
 }
 
-export const Tabs = ({ data, defaultTab }: TabsProps) => {
-  const api = getTabsApi(defaultTab, (details) => console.log(details));
+export const Tabs = (props: TabsProps) => {
+  const api = getTabsApi(props.defaultTab, (details) => console.log(details));
 
   return (
     <div {...api().rootProps}>
       <div>
-        <For each={data}>
+        <For each={props.data}>
           {(item) => (
             <div {...api().getContentProps({ value: item.value })}>
               <p>{item.content}</p>
@@ -22,7 +22,7 @@ export const Tabs = ({ data, defaultTab }: TabsProps) => {
         </For>
       </div>
       <div {...api().tablistProps}>
-        <For each={data}>
+        <For each={props.data}>
           {(item) => (
             <button
               class={s.btn}
