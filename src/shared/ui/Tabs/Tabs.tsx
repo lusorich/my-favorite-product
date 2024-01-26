@@ -5,17 +5,21 @@ import s from './Tabs.module.scss';
 interface TabsProps {
   data: { value: string; content: string | JSX.Element; icon: JSX.Element }[];
   defaultTab: string;
+  classes?: { wrapper?: string; itemContentWrapper?: string };
 }
 
 export const Tabs = (props: TabsProps) => {
   const api = getTabsApi(props.defaultTab, (details) => console.log(details));
 
   return (
-    <div {...api().rootProps}>
+    <div class={props?.classes?.wrapper || ''} {...api().rootProps}>
       <div>
         <For each={props.data}>
           {(item) => (
-            <div {...api().getContentProps({ value: item.value })}>
+            <div
+              class={props?.classes?.itemContentWrapper || ''}
+              {...api().getContentProps({ value: item.value })}
+            >
               <p>{item.content}</p>
             </div>
           )}

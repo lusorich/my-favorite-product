@@ -8,7 +8,16 @@ export const PublicPage = () => {
     <section class={s.content}>
       <Header />
 
-      <Tabs data={TABS_CONTENT} defaultTab={TABS_CONTENT['0'].value} />
+      <div class={s.tabsContainer}>
+        <Tabs
+          classes={{
+            wrapper: s.tabsWrapper,
+            itemContentWrapper: s.itemContentWrapper,
+          }}
+          data={TABS_CONTENT}
+          defaultTab={TABS_CONTENT['0'].value}
+        />
+      </div>
     </section>
   );
 };
