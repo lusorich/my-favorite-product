@@ -3,4 +3,26 @@
 .content {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.tabsContainer {
+  position: relative;
+  top: 50%;
+  transform: translateY(-70%);
+  margin-left: -4rem;
+  padding: 8rem 0 8rem 4rem;
+  background: url('../../../shared/assets/images/bg.svg') no-repeat;
+  background-size: contain;
+}
+
+.tabsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15rem;
+  max-width: 60rem;
+}
+
+.itemContentWrapper {
+  max-height: 12rem;
 }
