@@ -16,11 +16,17 @@
   background-size: contain;
 }
 
-.tabsWrapper {
+.tabsMainWrapper {
   display: flex;
   flex-direction: column;
   gap: 15rem;
   max-width: 60rem;
+}
+
+.tabsItemsWrapper {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 2rem;
 }
 
 .itemContentWrapper {

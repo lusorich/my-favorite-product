@@ -11,8 +11,9 @@
   },
   "dependencies": {
     "@solidjs/router": "^0.10.7",
-    "@zag-js/solid": "^0.32.1",
-    "@zag-js/tabs": "^0.32.1",
+    "@zag-js/dialog": "0.32.1",
+    "@zag-js/solid": "0.32.1",
+    "@zag-js/tabs": "0.32.1",
     "path": "^0.12.7",
     "prettier": "^3.2.4",
     "save-dev": "^0.0.1-security",

@@ -11,8 +11,9 @@ export const PublicPage = () => {
       <div class={s.tabsContainer}>
         <Tabs
           classes={{
-            wrapper: s.tabsWrapper,
+            wrapper: s.tabsMainWrapper,
             itemContentWrapper: s.itemContentWrapper,
+            tabsItemsWrapper: s.tabsItemsWrapper,
           }}
           data={TABS_CONTENT}
           defaultTab={TABS_CONTENT['0'].value}

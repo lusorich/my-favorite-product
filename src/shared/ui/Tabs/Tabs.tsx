@@ -5,7 +5,12 @@ import s from './Tabs.module.scss';
 interface TabsProps {
   data: { value: string; content: string | JSX.Element; icon: JSX.Element }[];
   defaultTab: string;
-  classes?: { wrapper?: string; itemContentWrapper?: string };
+  classes?: {
+    wrapper?: string;
+    itemContentWrapper?: string;
+    tabsItemsWrapper?: string;
+    tabsWrapper?: string;
+  };
 }
 
 export const Tabs = (props: TabsProps) => {
@@ -25,17 +30,19 @@ export const Tabs = (props: TabsProps) => {
           )}
         </For>
       </div>
-      <div {...api().tablistProps}>
-        <For each={props.data}>
-          {(item) => (
-            <button
-              class={s.btn}
-              {...api().getTriggerProps({ value: item.value })}
-            >
-              {item.icon}
-            </button>
-          )}
-        </For>
+      <div class={props?.classes?.tabsWrapper || ''} {...api().tablistProps}>
+        <div class={props?.classes?.tabsItemsWrapper || ''}>
+          <For each={props.data}>
+            {(item) => (
+              <button
+                class={s.btn}
+                {...api().getTriggerProps({ value: item.value })}
+              >
+                {item.icon}
+              </button>
+            )}
+          </For>
+        </div>
         <div class={s.line} {...api().indicatorProps} />
       </div>
     </div>
